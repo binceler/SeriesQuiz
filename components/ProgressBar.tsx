@@ -1,15 +1,12 @@
 import React from 'react';
 import { View, StyleSheet, Animated, ViewStyle } from 'react-native';
-
 interface ProgressBarProps {
   current: number;
   total: number;
   style?: ViewStyle;
 }
-
 export function ProgressBar({ current, total, style }: ProgressBarProps) {
   const progress = (current / total) * 100;
-
   return (
     <View style={[styles.container, style]}>
       <View style={styles.track}>
@@ -36,7 +33,6 @@ export function ProgressBar({ current, total, style }: ProgressBarProps) {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',

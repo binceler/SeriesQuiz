@@ -1,25 +1,29 @@
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { AuthProvider } from '@/contexts/AuthContext'
-import { useFrameworkReady } from '@/hooks/useFrameworkReady'
-
+import SplashScreen from '../components/SplashScreen';
 export default function RootLayout() {
-  useFrameworkReady();
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      document.title = '🍃 Yaprak Dökümü Quiz';
-    }
-  }, []);
-
+  const [showSplash, setShowSplash] = useState(true);
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+  if (showSplash) {
+    return (
+      <>
+        <SplashScreen onAnimationComplete={handleSplashComplete} />
+        <StatusBar style="light" />
+      </>
+    );
+  }
   return (
-    <AuthProvider>
+    <>
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="login" />
-        <Stack.Screen name="(tabs)" />
-        <Stack.Screen name="+not-found" />
+        <Stack.Screen name="index" />
+        <Stack.Screen name="quiz" />
+        <Stack.Screen name="results" />
+        <Stack.Screen name="history" />
       </Stack>
       <StatusBar style="light" />
-    </AuthProvider>
+    </>
   );
 }
