@@ -1,0 +1,22 @@
+[build]
+  publish = "dist"
+  command = "npm run build:web"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"], Country = ["US"]}
+
+# Handle all routes for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Redirect root domain to specific subdomain if needed
+[[redirects]]
+  from = "https://yaprakdokumu.netlify.app/*"
+  to = "https://yaprakdokumu.netlify.app/:splat"
+  status = 200
+  force = false
