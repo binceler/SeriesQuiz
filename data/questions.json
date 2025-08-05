@@ -112,5 +112,71 @@
     "question": "'Senin sinir katsayın yükselmiş' bu replik kime aittir?",
     "options": ["Leyla", "Ferhunde", "Fikret", "Sedef"],
     "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Hayriye çayı nasıl içiyordu?",
+    "options": ["Şekersiz", "Tek şekerli", "2 şekerli", "Tek şekerli+limonlu"],
+    "correct": 0
+  },
+  {
+    "id": 21,
+    "question": "Neyyiri istemeye geldiklerinde,Hayriye Kahveci Ahmet’i kime benzetip yaşını hiç göstermiyor demiştir?",
+    "options": ["Tarik akan", "Cüneyt Arkın", "Şener şen", "Halit Akçatepe"],
+    "correct": 3
+  },
+  {
+    "id": 22,
+    "question": "Nezih Amerika’da ne okumuştu?",
+    "options": ["Uluslararası ilişkiler ", "Ekonomi", "İşletme", "Politika"],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "question": "Ayşe hangi bölümde değişmiştir?",
+    "options": ["13", "14", "15", "16"],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "question": "Sedef çocukken, hangi tiyatro oyununda başrolde oynamıştır?",
+    "options": ["Pamuk prenses", "Kibritçi kız", "Kül kedisi", "Kırmızı başlıklı kız"],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "question": "Leyla oğuzla evlendiğinde yeni evinde ilk hangi yemeği yapmıştır?",
+    "options": ["Enginar", "Taze Fasülye", "Biber Dolması", "Türlü"],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "question": "Sedef çocukken, hangi tiyatro oyununda başrolde oynamıştır?",
+    "options": ["Pamuk prenses", "Kibritçi kız", "Kül kedisi", "Kırmızı başlıklı kız"],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "question": "Ferhundenin altın gününde çekilen kurada çıkan kadının adı neydi?",
+    "options": ["Emine", "Seher", "Nezaket", "Sevim"],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "question": "Muhallebiyi bol tarçınlı seven kimdi?",
+    "options": ["Ayşe", "Necla", "Leyla", "Şevket"],
+    "correct": 2
+  },
+  {
+    "id": 29,
+    "question": "Tekin ailesi köşke geldiği gün neyyirle Sedef tanışmaya geldiğinde ellerindeki tabakta ne  vardı?",
+    "options": ["Yaprak Sarma", "Börek", "Poğaça", "Kek"],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "question": "Tekinlerin istanbula taşındığının ertesi günü ailecek gezmeye gittikleri rotasyonlar arasında hangisi yoktur?",
+    "options": ["Sultanahmet", "Kapalıçarşı", "Avm", "Kız kulesi"],
+    "correct": 3
   }
 ]
