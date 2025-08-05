@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
-
 const { width, height } = Dimensions.get('window');
-
 export function TurkishPattern() {
   return (
     <View style={styles.container}>
@@ -27,7 +25,6 @@ export function TurkishPattern() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',

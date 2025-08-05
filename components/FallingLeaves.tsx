@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { View, StyleSheet, Animated, Dimensions } from 'react-native';
-import { Leaf } from 'lucide-react-native';
-
+import { View, StyleSheet, Animated, Dimensions, Text } from 'react-native';
 const { width, height } = Dimensions.get('window');
-
 export function FallingLeaves() {
+  const leafEmojis = ['🍂', '🍃', '🍁', '🌿'];
   const leaves = useRef(
     Array.from({ length: 6 }, (_, i) => ({
       id: i,
@@ -12,15 +10,14 @@ export function FallingLeaves() {
       y: new Animated.Value(-50),
       rotation: new Animated.Value(0),
       scale: new Animated.Value(0.5 + Math.random() * 0.5),
+      emoji: leafEmojis[i % leafEmojis.length],
     }))
   ).current;
-
   useEffect(() => {
     const animateLeaves = () => {
       leaves.forEach((leaf, index) => {
         const duration = 8000 + Math.random() * 4000;
         const delay = index * 1000;
-
         Animated.loop(
           Animated.sequence([
             Animated.delay(delay),
@@ -31,7 +28,7 @@ export function FallingLeaves() {
                 useNativeDriver: true,
               }),
               Animated.timing(leaf.x, {
-                toValue: leaf.x._value + (Math.random() - 0.5) * 100,
+                toValue: Math.random() * width,
                 duration,
                 useNativeDriver: true,
               }),
@@ -50,10 +47,8 @@ export function FallingLeaves() {
         ).start();
       });
     };
-
     animateLeaves();
   }, []);
-
   return (
     <View style={styles.container}>
       {leaves.map((leaf) => (
@@ -74,16 +69,14 @@ export function FallingLeaves() {
             },
           ]}
         >
-          <Leaf
-            size={20}
-            color={`hsl(${30 + Math.random() * 60}, 70%, 50%)`}
-          />
+          <Text style={styles.leafEmoji}>
+            {leaf.emoji}
+          </Text>
         </Animated.View>
       ))}
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
@@ -95,5 +88,11 @@ const styles = StyleSheet.create({
   },
   leaf: {
     position: 'absolute',
+  },
+  leafEmoji: {
+    fontSize: 20,
+    textShadowColor: 'rgba(0,0,0,0.3)',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 2,
   },
 });
