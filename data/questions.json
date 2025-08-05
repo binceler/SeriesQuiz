@@ -15,31 +15,31 @@
     "id": 3,
     "question": "Leyla ve Görkem'in motorla çarptığı adamın adı soyadı nedir?",
     "options": ["Ahmet Çelik", "Hasan Yıldız", "Mehmet Ateş", "Hüseyin Demir"],
-    "correct": 1
+    "correct": 2
   },
   {
     "id": 4,
     "question": "Necla ve Ali Sarper, Leyla ve Oğuz'la fırında karşılaştığı gün, Leyla'lar eve hangi balığı almıştı?",
     "options": ["Levrek", "Çupra", "Lüfer", "Palamut"],
-    "correct": 0
+    "correct": 1
   },
   {
     "id": 5,
     "question": "Mehmet okulda doğum günü kutlayacağında Cevriye 'ne gerek var' demişti. Mehmet: 'geçen hafta ... da okulda kutladı' dediği arkadaşının adı neydi?",
     "options": ["Efe", "Alp", "Mert", "Eymen"],
-    "correct": 2
+    "correct": 0
   },
   {
     "id": 6,
     "question": "Fikret'in exi Selim'in arabası ne renkti?",
     "options": ["Beyaz", "Siyah", "Mavi", "Kırmızı"],
-    "correct": 0
+    "correct": 2
   },
   {
     "id": 7,
     "question": "Oğuz, Mithat'tan evi satarken almadığı komisyonu istemeye gelince yüzde kaç komisyon aldığını söylemişti?",
     "options": ["2", "3", "4", "5"],
-    "correct": 3
+    "correct": 1
   },
   {
     "id": 8,
@@ -57,37 +57,37 @@
     "id": 10,
     "question": "Ali Rıza'nın gittiği musiki derneğinin adı neydi?",
     "options": ["Aşiyan Musiki Derneği", "Boğaziçi Musiki Derneği", "Üsküdar Musiki Derneği", "Türk Sanat Musikileri Deneği"],
-    "correct": 1
+    "correct": 0
   },
   {
     "id": 11,
     "question": "Cevriye'nin doğum günü hangi gün?",
     "options": ["12 Nisan", "20 Nisan", "8 Nisan", "10 Nisan"],
-    "correct": 1
+    "correct": 0
   },
   {
     "id": 12,
     "question": "Ferhunde'nin ilk aldığı yeşil arabanın plakası nedir?",
     "options": ["34 SRJ 5634", "34 US 0971", "34 YK 517", "34 TK 8749"],
-    "correct": 2
+    "correct": 1
   },
   {
     "id": 13,
     "question": "Sevda hanımın Ayşe ile aynı okula giden torununun adı nedir?",
     "options": ["Mert", "Efe", "Ali", "Can"],
-    "correct": 1
+    "correct": 0
   },
   {
     "id": 14,
     "question": "Tahsinin Sacide ile tanıştığı tavernanın adı nedir?",
     "options": ["Merkez Tavernası", "Yıldız Tavernası", "Dostlar Tavernası", "Saadet Tavernası"],
-    "correct": 4
+    "correct": 3
   },
   {
     "id": 15,
     "question": "Necla telefonla konuşurken Leyla Oğuzla konuştuğunu zannedip telefonu elinden aldığında Neclanın aslında konuştuğu arkadaşının adı neydi?",
     "options": ["Özlem", "Ada", "Burcu", "Ceren"],
-    "correct": 3
+    "correct": 2
   },
   {
     "id": 16,
@@ -99,30 +99,18 @@
     "id": 17,
     "question": "Leyla'nın doğum gününde gittikleri mekanda, Oğuz'un bakın kimler var diyerek hava yaptığı tar holdingin başkanının adı neydi?",
     "options": ["Murat", "Sedat", "Vedat", "Fuat"],
-    "correct": 2
+    "correct": 1
   },
   {
     "id": 18,
-    "question": "Leyla'nın doğum gününde gittikleri mekanda, Oğuz'un bakın kimler var diyerek hava yaptığı tar holdingin başkanının adı neydi?",
-    "options": ["Murat", "Sedat", "Vedat", "Fuat"],
-    "correct": 2
+    "question": "Köşkü satın almak için kapora verip istimlak durumunu öğrenince vazgeçen adamın adı neydi?",
+    "options": ["İlhami", "Selami", "Rahmi", "Niyazi"],
+    "correct": 1
   },
   {
     "id": 19,
-    "question": "Köşkü satın almak için kapora verip istimlak durumunu öğrenince vazgeçen adamın adı neydi?",
-    "options": ["İlhami", "Selami", "Rahmi", "Niyazi"],
-    "correct": 2
-  },
-  {
-    "id": 20,
     "question": "'Senin sinir katsayın yükselmiş' bu replik kime aittir?",
     "options": ["Leyla", "Ferhunde", "Fikret", "Sedef"],
-    "correct": 2
-  },
-  {
-    "id": 21,
-    "question": "'Senin sinir katsayın yükselmiş' bu replik kime aittir?",
-    "options": ["Leyla", "Ferhunde", "Fikret", "Sedef"],
-    "correct": 2
+    "correct": 1
   }
 ]
