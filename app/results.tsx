@@ -121,9 +121,23 @@ export default function ResultsScreen() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={['#1B5E20', '#2E7D32', '#388E3C']}
+        colors={['#F5F5DC', '#FFF8E7', '#E6D5B8']}
         style={styles.gradient}
       >
+        {/* Background decorative leaves */}
+        <View style={styles.backgroundDecor}>
+          <Text style={[styles.decorLeaf, { top: '10%', left: '10%' }]}>🍂</Text>
+          <Text style={[styles.decorLeaf, { top: '15%', right: '15%' }]}>🍃</Text>
+          <Text style={[styles.decorLeaf, { top: '70%', left: '5%' }]}>🍁</Text>
+          <Text style={[styles.decorLeaf, { bottom: '20%', right: '10%' }]}>🍂</Text>
+        </View>
+
+        {/* Header with welcome message */}
+        <View style={styles.welcomeHeader}>
+          <Text style={styles.welcomeTitle}>🍂 Yaprak Dökümü Quiz</Text>
+          <Text style={styles.welcomeSubtitle}>Quiz Uygulamasına Hoş Geldiniz</Text>
+        </View>
+
         {/* Celebration leaves for high scores */}
         {percentage >= 60 && <CelebrationLeaves />}
         <Animated.View
@@ -178,7 +192,7 @@ export default function ResultsScreen() {
               activeOpacity={0.8}
             >
               <LinearGradient
-                colors={['#FFD700', '#FFC107']}
+                colors={['#A0522D', '#8B4513', '#CD853F']}
                 style={styles.buttonGradient}
               >
                 <Text style={styles.restartButtonText}>🔄 Tekrar Quiz Çöz</Text>
@@ -198,6 +212,40 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     paddingTop: 60,
+    maxWidth: 600,
+    alignSelf: 'center',
+    width: '100%',
+  },
+  backgroundDecor: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 0,
+  },
+  decorLeaf: {
+    position: 'absolute',
+    fontSize: 40,
+    opacity: 0.1,
+    color: '#8B4513',
+  },
+  welcomeHeader: {
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  welcomeTitle: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#5D4037',
+    textAlign: 'center',
+    marginBottom: 5,
+  },
+  welcomeSubtitle: {
+    fontSize: 16,
+    color: '#8B4513',
+    textAlign: 'center',
+    opacity: 0.8,
   },
   celebrationContainer: {
     position: 'absolute',
@@ -217,14 +265,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 32,
+    fontSize: Math.min(32, width * 0.08),
     fontWeight: 'bold',
-    color: '#FFFFFF',
+    color: '#5D4037',
     textAlign: 'center',
     marginBottom: 40,
-    textShadowColor: 'rgba(0,0,0,0.3)',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 3,
   },
   scoreCircle: {
     marginBottom: 40,
@@ -234,14 +279,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 20,
     elevation: 15,
+    alignSelf: 'center',
   },
   scoreCircleGradient: {
-    width: 240,
-    height: 240,
-    borderRadius: 120,
+    width: Math.min(240, width * 0.6),
+    height: Math.min(240, width * 0.6),
+    borderRadius: Math.min(120, width * 0.3),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
   },
   scoreContainer: {
     flexDirection: 'row',
@@ -249,59 +295,55 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   scoreText: {
-    fontSize: 64,
+    fontSize: Math.min(64, width * 0.16),
     fontWeight: 'bold',
-    color: '#FFFFFF',
-    textShadowColor: 'rgba(0,0,0,0.3)',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 3,
+    color: '#5D4037',
   },
   totalText: {
-    fontSize: 32,
-    color: 'rgba(255, 255, 255, 0.8)',
+    fontSize: Math.min(32, width * 0.08),
+    color: '#8B4513',
     marginLeft: 5,
   },
   percentage: {
-    fontSize: 32,
+    fontSize: Math.min(32, width * 0.08),
     fontWeight: 'bold',
-    color: '#FFFFFF',
-    textShadowColor: 'rgba(0,0,0,0.3)',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 3,
+    color: '#5D4037',
   },
   resultContainer: {
-    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
     padding: 25,
     borderRadius: 20,
     marginBottom: 30,
     alignItems: 'center',
     borderWidth: 2,
     backdropFilter: 'blur(10px)',
-    width: width - 80,
+    width: '100%',
+    maxWidth: 500,
   },
   resultEmoji: {
-    fontSize: 48,
+    fontSize: Math.min(48, width * 0.12),
     marginBottom: 15,
   },
   resultTitle: {
-    fontSize: 24,
+    fontSize: Math.min(24, width * 0.06),
     fontWeight: 'bold',
-    color: '#FFFFFF',
+    color: '#5D4037',
     textAlign: 'center',
     marginBottom: 10,
   },
   resultMessage: {
-    fontSize: 16,
-    color: 'rgba(255, 255, 255, 0.9)',
+    fontSize: Math.min(16, width * 0.04),
+    color: '#8B4513',
     textAlign: 'center',
     lineHeight: 24,
   },
   statsCard: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
     borderRadius: 15,
     padding: 20,
     marginBottom: 30,
-    width: width - 80,
+    width: '100%',
+    maxWidth: 500,
   },
   statRow: {
     flexDirection: 'row',
@@ -310,13 +352,13 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   statLabel: {
-    fontSize: 16,
-    color: 'rgba(255, 255, 255, 0.8)',
+    fontSize: Math.min(16, width * 0.04),
+    color: '#8B4513',
   },
   statValue: {
-    fontSize: 18,
+    fontSize: Math.min(18, width * 0.045),
     fontWeight: 'bold',
-    color: '#FFFFFF',
+    color: '#5D4037',
   },
   buttonContainer: {
     width: '100%',
@@ -337,8 +379,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   restartButtonText: {
-    fontSize: 18,
+    fontSize: Math.min(18, width * 0.045),
     fontWeight: 'bold',
-    color: '#2E7D32',
+    color: '#F5F5DC',
   },
 });

@@ -52,7 +52,7 @@ export default function HistoryScreen() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={['#1B5E20', '#2E7D32', '#388E3C']}
+        colors={['#F5F5DC', '#FFF8E7', '#E6D5B8']}
         style={styles.gradient}
       >
         {/* Header */}

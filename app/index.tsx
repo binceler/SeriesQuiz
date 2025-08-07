@@ -45,7 +45,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={['#1B5E20', '#2E7D32', '#388E3C']}
+        colors={['#F5F5DC', '#FFF8E7', '#E6D5B8']}
         style={styles.gradient}
       >
         {/* Background decorative leaves */}
@@ -93,7 +93,7 @@ export default function HomeScreen() {
             activeOpacity={0.8}
           >
             <LinearGradient
-              colors={['#FFD700', '#FFC107']}
+              colors={['#A0522D', '#8B4513', '#CD853F']}
               style={styles.buttonGradient}
             >
               <Text style={styles.startButtonText}>🎯 Quiz'e Başla</Text>
@@ -130,6 +130,59 @@ export default function HomeScreen() {
             </View>
           </View>
         </Animated.View>
+        
+        {/* Footer */}
+        <View style={styles.footer}>
+          <Text style={styles.footerText}>
+            Developed with ❤️ by{' '}
+            <Text 
+              style={styles.footerMainLink}
+              onPress={() => {
+                if (typeof window !== 'undefined') {
+                  window.open('https://twitter.com/bsrinceler', '_blank');
+                }
+              }}
+            >
+              Büşra İnceler
+            </Text>
+          </Text>
+          <Text style={styles.footerSubText}>
+            Special thanks to{' '}
+            <Text 
+              style={styles.footerLink}
+              onPress={() => {
+                if (typeof window !== 'undefined') {
+                  window.open('https://twitter.com/_discoonetus', '_blank');
+                }
+              }}
+            >
+              @_discoonetus
+            </Text>
+            {', '}
+            <Text 
+              style={styles.footerLink}
+              onPress={() => {
+                if (typeof window !== 'undefined') {
+                  window.open('https://twitter.com/mommy__ai', '_blank');
+                }
+              }}
+            >
+              @mommy__ai
+            </Text>
+            {' & '}
+            <Text 
+              style={styles.footerLink}
+              onPress={() => {
+                if (typeof window !== 'undefined') {
+                  window.open('https://x.com/diiaannana', '_blank');
+                }
+              }}
+            >
+              @diiaannana
+            </Text>
+            {' for the inspiration'}
+          </Text>
+        </View>
       </LinearGradient>
     </View>
   );
@@ -141,8 +194,9 @@ const styles = StyleSheet.create({
   gradient: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingTop: 60,
-    paddingBottom: 40,
+    paddingVertical: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   backgroundDecor: {
     position: 'absolute',
@@ -157,60 +211,70 @@ const styles = StyleSheet.create({
     opacity: 0.1,
   },
   header: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 30,
   },
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 15,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
   },
   leafIcon: {
     fontSize: 40,
     marginRight: 10,
   },
   title: {
-    fontSize: 36,
+    fontSize: 32,
     fontWeight: 'bold',
-    color: '#FFFFFF',
-    textShadowColor: 'rgba(0,0,0,0.3)',
+    color: '#5D4037',
+    textShadowColor: 'rgba(0,0,0,0.1)',
     textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 3,
+    textShadowRadius: 2,
+    textAlign: 'center',
+    fontFamily: 'System',
   },
   subtitle: {
-    fontSize: 18,
-    color: 'rgba(255, 255, 255, 0.9)',
+    fontSize: 16,
+    color: '#6D4C41',
     textAlign: 'center',
     fontWeight: '300',
   },
   content: {
-    flex: 1.5,
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
+    maxWidth: 500,
   },
   descriptionCard: {
-    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    backgroundColor: 'rgba(213, 180, 140, 0.3)',
     borderRadius: 20,
     padding: 25,
     marginBottom: 40,
+    marginHorizontal: 10,
     backdropFilter: 'blur(10px)',
-    shadowColor: '#000',
+    shadowColor: '#A0522D',
     shadowOffset: { width: 0, height: 5 },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.15,
     shadowRadius: 10,
     elevation: 5,
+    width: '100%',
+    maxWidth: 450,
+    borderWidth: 1,
+    borderColor: 'rgba(160, 82, 45, 0.2)',
   },
   description: {
     fontSize: 16,
-    color: '#FFFFFF',
+    color: '#3E2723',
     textAlign: 'center',
     lineHeight: 24,
     marginBottom: 10,
   },
   descriptionSub: {
     fontSize: 14,
-    color: 'rgba(255, 255, 255, 0.8)',
+    color: '#6D4C41',
     textAlign: 'center',
     fontStyle: 'italic',
   },
@@ -222,42 +286,51 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 10,
     elevation: 10,
+    width: '90%',
+    maxWidth: 300,
   },
   buttonGradient: {
-    paddingHorizontal: 50,
+    paddingHorizontal: 40,
     paddingVertical: 18,
     borderRadius: 30,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   startButtonText: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: '#2E7D32',
+    color: '#F5F5DC',
     textAlign: 'center',
   },
   historyButton: {
-    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    backgroundColor: 'rgba(213, 180, 140, 0.25)',
     marginTop: 15,
     borderRadius: 25,
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.3)',
+    borderColor: 'rgba(160, 82, 45, 0.3)',
+    width: '90%',
+    maxWidth: 300,
   },
   historyButtonText: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#FFFFFF',
+    color: '#5D4037',
     textAlign: 'center',
     paddingVertical: 15,
     paddingHorizontal: 30,
   },
   statsContainer: {
     flexDirection: 'row',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(213, 180, 140, 0.2)',
     borderRadius: 15,
     padding: 20,
     alignItems: 'center',
     justifyContent: 'space-around',
-    width: width - 80,
+    marginBottom: 30,
+    width: '95%',
+    maxWidth: 400,
+    borderWidth: 1,
+    borderColor: 'rgba(160, 82, 45, 0.2)',
   },
   statItem: {
     alignItems: 'center',
@@ -266,18 +339,55 @@ const styles = StyleSheet.create({
   statNumber: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#FFD700',
+    color: '#A0522D',
     marginBottom: 5,
   },
   statLabel: {
     fontSize: 12,
-    color: 'rgba(255, 255, 255, 0.8)',
+    color: '#6D4C41',
     textAlign: 'center',
   },
   statDivider: {
     width: 1,
     height: 40,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: 'rgba(160, 82, 45, 0.3)',
     marginHorizontal: 10,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    left: 20,
+    right: 20,
+    alignItems: 'center',
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    borderRadius: 15,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#5D4037',
+    textAlign: 'center',
+    fontWeight: '500',
+    marginBottom: 5,
+  },
+  footerSubText: {
+    fontSize: 12,
+    color: '#6D4C41',
+    textAlign: 'center',
+    fontWeight: '400',
+  },
+  footerLink: {
+    color: '#8D6E63',
+    fontWeight: '600',
+    textDecorationLine: 'underline',
+    opacity: 0.8,
+  },
+  footerMainLink: {
+    color: '#A0522D',
+    fontWeight: '600',
+    textDecorationLine: 'underline',
   },
 });

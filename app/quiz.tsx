@@ -112,9 +112,23 @@ export default function QuizScreen() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={['#1B5E20', '#2E7D32', '#388E3C']}
+        colors={['#F5F5DC', '#FFF8E7', '#E6D5B8']}
         style={styles.gradient}
       >
+        {/* Background decorative leaves */}
+        <View style={styles.backgroundDecor}>
+          <Text style={[styles.decorLeaf, { top: '10%', left: '10%' }]}>🍂</Text>
+          <Text style={[styles.decorLeaf, { top: '15%', right: '15%' }]}>🍃</Text>
+          <Text style={[styles.decorLeaf, { top: '70%', left: '5%' }]}>🍁</Text>
+          <Text style={[styles.decorLeaf, { bottom: '20%', right: '10%' }]}>🍂</Text>
+        </View>
+
+        {/* Header with welcome message */}
+        <View style={styles.welcomeHeader}>
+          <Text style={styles.welcomeTitle}>🍂 Yaprak Dökümü Quiz</Text>
+          <Text style={styles.welcomeSubtitle}>Quiz Uygulamasına Hoş Geldiniz</Text>
+        </View>
+
         {/* Header with progress */}
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton} onPress={handleBack}>
@@ -203,7 +217,7 @@ export default function QuizScreen() {
               activeOpacity={0.8}
             >
               <LinearGradient
-                colors={['#FFD700', '#FFC107']}
+                colors={['#A0522D', '#8B4513', '#CD853F']}
                 style={styles.nextButtonGradient}
               >
                 <Text style={styles.nextButtonText}>
@@ -225,6 +239,40 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     paddingTop: 60,
+    maxWidth: 600,
+    alignSelf: 'center',
+    width: '100%',
+  },
+  backgroundDecor: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 0,
+  },
+  decorLeaf: {
+    position: 'absolute',
+    fontSize: 40,
+    opacity: 0.1,
+    color: '#8B4513',
+  },
+  welcomeHeader: {
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  welcomeTitle: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#5D4037',
+    textAlign: 'center',
+    marginBottom: 5,
+  },
+  welcomeSubtitle: {
+    fontSize: 16,
+    color: '#8B4513',
+    textAlign: 'center',
+    opacity: 0.8,
   },
   header: {
     flexDirection: 'row',
@@ -233,7 +281,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   backButton: {
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: 'rgba(93, 64, 55, 0.2)',
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 20,
@@ -241,7 +289,7 @@ const styles = StyleSheet.create({
   },
   backButtonText: {
     fontSize: 14,
-    color: '#FFFFFF',
+    color: '#5D4037',
     fontWeight: '600',
     textAlign: 'center',
   },
@@ -251,42 +299,42 @@ const styles = StyleSheet.create({
   },
   progressBar: {
     height: 8,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: 'rgba(93, 64, 55, 0.2)',
     borderRadius: 4,
     marginBottom: 8,
   },
   progressFill: {
     height: '100%',
-    backgroundColor: '#FFD700',
+    backgroundColor: '#A0522D',
     borderRadius: 4,
   },
   progressText: {
     fontSize: 14,
-    color: 'rgba(255, 255, 255, 0.8)',
+    color: '#5D4037',
     fontWeight: '600',
   },
   scoreContainer: {
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 215, 0, 0.2)',
+    backgroundColor: 'rgba(160, 82, 45, 0.2)',
     paddingHorizontal: 15,
     paddingVertical: 8,
     borderRadius: 15,
   },
   scoreLabel: {
     fontSize: 12,
-    color: 'rgba(255, 255, 255, 0.8)',
+    color: '#8B4513',
     marginBottom: 2,
   },
   score: {
     fontSize: 20,
-    color: '#FFD700',
+    color: '#A0522D',
     fontWeight: 'bold',
   },
   questionContainer: {
     marginBottom: 30,
   },
   questionCard: {
-    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
     padding: 25,
     borderRadius: 20,
     backdropFilter: 'blur(10px)',
@@ -298,14 +346,14 @@ const styles = StyleSheet.create({
   },
   questionNumber: {
     fontSize: 14,
-    color: '#FFD700',
+    color: '#A0522D',
     fontWeight: '600',
     marginBottom: 10,
     textAlign: 'center',
   },
   questionText: {
     fontSize: 18,
-    color: '#FFFFFF',
+    color: '#5D4037',
     textAlign: 'center',
     lineHeight: 26,
     fontWeight: '500',
@@ -314,7 +362,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   option: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
     marginBottom: 15,
     borderRadius: 15,
     borderWidth: 2,
@@ -345,19 +393,19 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: 'rgba(93, 64, 55, 0.2)',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 15,
   },
   optionLetter: {
     fontSize: 16,
-    color: '#FFFFFF',
+    color: '#5D4037',
     fontWeight: 'bold',
   },
   optionText: {
     fontSize: 16,
-    color: '#FFFFFF',
+    color: '#5D4037',
     flex: 1,
     lineHeight: 22,
   },
@@ -385,6 +433,6 @@ const styles = StyleSheet.create({
   nextButtonText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#2E7D32',
+    color: '#F5F5DC',
   },
 });

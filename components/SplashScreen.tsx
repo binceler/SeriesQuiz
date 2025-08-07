@@ -105,7 +105,7 @@ export default function SplashScreen({ onAnimationComplete }: SplashScreenProps)
   };
   return (
     <LinearGradient
-      colors={['#1B5E20', '#2E7D32', '#388E3C']}
+      colors={['#5D4037', '#8B4513', '#A0522D']}
       style={styles.container}
     >
       {/* Falling leaves */}
