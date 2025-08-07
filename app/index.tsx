@@ -130,6 +130,59 @@ export default function HomeScreen() {
             </View>
           </View>
         </Animated.View>
+        
+        {/* Footer */}
+        <View style={styles.footer}>
+          <Text style={styles.footerText}>
+            Developed with ❤️ by{' '}
+            <Text 
+              style={styles.footerMainLink}
+              onPress={() => {
+                if (typeof window !== 'undefined') {
+                  window.open('https://twitter.com/bsrinceler', '_blank');
+                }
+              }}
+            >
+              Büşra İnceler
+            </Text>
+          </Text>
+          <Text style={styles.footerSubText}>
+            Special thanks to{' '}
+            <Text 
+              style={styles.footerLink}
+              onPress={() => {
+                if (typeof window !== 'undefined') {
+                  window.open('https://twitter.com/_discoonetus', '_blank');
+                }
+              }}
+            >
+              @_discoonetus
+            </Text>
+            {', '}
+            <Text 
+              style={styles.footerLink}
+              onPress={() => {
+                if (typeof window !== 'undefined') {
+                  window.open('https://twitter.com/mommy__ai', '_blank');
+                }
+              }}
+            >
+              @mommy__ai
+            </Text>
+            {' & '}
+            <Text 
+              style={styles.footerLink}
+              onPress={() => {
+                if (typeof window !== 'undefined') {
+                  window.open('https://x.com/diiaannana', '_blank');
+                }
+              }}
+            >
+              @diiaannana
+            </Text>
+            {' for the inspiration'}
+          </Text>
+        </View>
       </LinearGradient>
     </View>
   );
@@ -299,5 +352,42 @@ const styles = StyleSheet.create({
     height: 40,
     backgroundColor: 'rgba(160, 82, 45, 0.3)',
     marginHorizontal: 10,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    left: 20,
+    right: 20,
+    alignItems: 'center',
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    borderRadius: 15,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#5D4037',
+    textAlign: 'center',
+    fontWeight: '500',
+    marginBottom: 5,
+  },
+  footerSubText: {
+    fontSize: 12,
+    color: '#6D4C41',
+    textAlign: 'center',
+    fontWeight: '400',
+  },
+  footerLink: {
+    color: '#8D6E63',
+    fontWeight: '600',
+    textDecorationLine: 'underline',
+    opacity: 0.8,
+  },
+  footerMainLink: {
+    color: '#A0522D',
+    fontWeight: '600',
+    textDecorationLine: 'underline',
   },
 });
