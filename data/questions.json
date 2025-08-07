@@ -7,13 +7,13 @@
   },
   {
     "id": 2,
-    "question": "Neyyiri istemeye geldiklerinde,Hayriye Kahveci Ahmet'i kime benzetip yaşını hiç göstermiyor demiştir?",
+    "question": "Neyyiri istemeye geldiklerinde,Hayriye Kahveci Ahmet’i kime benzetip yaşını hiç göstermiyor demiştir?",
     "options": ["Tarik akan", "Cüneyt Arkın", "Şener şen", "Halit Akçatepe"],
     "correct": 3
   },
   {
     "id": 3,
-    "question": "Nezih Amerika'da ne okumuştu?",
+    "question": "Nezih Amerika’da ne okumuştu?",
     "options": ["Uluslararası ilişkiler ", "Ekonomi", "İşletme", "Politika"],
     "correct": 1
   },
@@ -32,7 +32,12 @@
   {
     "id": 6,
     "question": "Sedef çocukken, hangi tiyatro oyununda başrolde oynamıştır?",
-    "options": ["Pamuk prenses", "Kibritçi kız", "Kül kedisi", "Kırmızı başlıklı kız"],
+    "options": [
+      "Pamuk prenses",
+      "Kibritçi kız",
+      "Kül kedisi",
+      "Kırmızı başlıklı kız"
+    ],
     "correct": 1
   },
   {
@@ -45,7 +50,7 @@
     "id": 8,
     "question": "Muhallebiyi bol tarçınlı seven kimdi?",
     "options": ["Ayşe", "Necla", "Leyla", "Şevket"],
-    "correct": 2
+    "correct": 4
   },
   {
     "id": 9,
@@ -61,8 +66,13 @@
   },
   {
     "id": 11,
-    "question": "Sedef'in lansmanında hangi ünlü yoktu?",
-    "options": ["Hüsnü şenlendirici", "Ece erken", "Reyhan Karaca", "Banu zorlu"],
+    "question": "Sedef’in lansmanında hangi ünlü yoktu?",
+    "options": [
+      "Hüsnü şenlendirici",
+      "Ece erken",
+      "Reyhan Karaca",
+      "Banu zorlu"
+    ],
     "correct": 3
   },
   {
